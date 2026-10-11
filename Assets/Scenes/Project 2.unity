@@ -543,7 +543,14 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+<<<<<<< HEAD:Assets/Scenes/Project 2.unity
   - {fileID: 1781846989}
   - {fileID: 1863423545}
   - {fileID: 1356018747}
   - {fileID: 573966878}
+=======
+  - {fileID: 1372258872}
+  - {fileID: 5534581320937897828}
+  - {fileID: 407745110}
+  - {fileID: 1826751481}
+>>>>>>> 2127029c6d315e8c1f97008a7a74864b770ab77b:Assets/Scenes/GetStarted_Scene.unity
