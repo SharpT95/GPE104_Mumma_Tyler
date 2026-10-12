@@ -23,6 +23,8 @@ public class PlayerController : Controller
     public KeyCode turboBoost1;
 
     public KeyCode turboBoost2;
+
+    public KeyCode quitKey;
     public override void MakeDecisions()
     {
         //Turbos
@@ -91,6 +93,11 @@ public class PlayerController : Controller
         {
             pawn.Teleport();
         }
+
+        if (Input.GetKeyDown(quitKey))
+        {
+            Application.Quit();
+        }
     }
     public override void Start()
     {
@@ -101,4 +108,5 @@ public class PlayerController : Controller
     {
         MakeDecisions();
     }
+
 }

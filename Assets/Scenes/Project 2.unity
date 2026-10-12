@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 187164644}
   - component: {fileID: 187164646}
   m_Layer: 0
-  m_Name: starShip_0
+  m_Name: StarShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,16 +378,75 @@ MonoBehaviour:
   m_GameObject: {fileID: 187164643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcf08cc9a32156440ace79d928937621, type: 3}
+  m_Script: {fileID: 11500000, guid: f3445871b042ed94a9240f8229d762c7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Teleport
-  teleportKey: 116
-  quitKey: 27
+  m_EditorClassIdentifier: Assembly-CSharp::StarShipPawn
   minX: -5
   maxX: 5
   minY: -5
   maxY: 5
   tf: {fileID: 0}
+  normalSpeed: 5
+  turboSpeed: 10
+  normalRotationSpeed: 30
+  turboRotationSpeed: 150
+--- !u!1 &511340746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511340747}
+  - component: {fileID: 511340748}
+  m_Layer: 0
+  m_Name: StarShipController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511340747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511340746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511340748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511340746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55cdabc148b29fe4486bd4d2e9ea9f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  pawn: {fileID: 187164646}
+  teleportKey: 116
+  moveForwardLocal: 119
+  moveBackwardLocal: 115
+  rotateClockwise: 100
+  rotateCounterClockwise: 97
+  moveForwardWorld: 273
+  moveBackwardWorld: 274
+  moveRightWorld: 275
+  moveLeftWorld: 276
+  turboBoost1: 304
+  turboBoost2: 303
+  quitKey: 27
 --- !u!1 &1480688762
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,50 +574,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &1684794159
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1684794161}
-  - component: {fileID: 1684794160}
-  m_Layer: 0
-  m_Name: HelloWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1684794160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684794159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09a7632d00b77ba41ac88429d28f4cdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HelloWorld
---- !u!4 &1684794161
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684794159}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.80532, y: 4.13762, z: 0.28588}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -566,4 +581,4 @@ SceneRoots:
   - {fileID: 173641356}
   - {fileID: 1480688764}
   - {fileID: 187164645}
-  - {fileID: 1684794161}
+  - {fileID: 511340747}
