@@ -27,7 +27,9 @@ public class PlayerController : Controller
     public KeyCode quitKey;
     public override void MakeDecisions()
     {
-        //Turbos
+        if (pawn != null)
+        {
+             //Turbos
         if (Input.GetKey(turboBoost1) || Input.GetKey(turboBoost2))
         {
            //Faster Movement
@@ -92,6 +94,7 @@ public class PlayerController : Controller
         if (Input.GetKeyDown(teleportKey))
         {
             pawn.Teleport();
+        }
         }
 
         if (Input.GetKeyDown(quitKey))
