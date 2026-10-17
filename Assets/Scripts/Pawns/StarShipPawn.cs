@@ -18,6 +18,8 @@ public class StarShipPawn : Pawn
 
     public float turboRotationSpeed;
 
+    private Shooter sh;
+
     public override void MoveForwardLocal()
     {
         tf.position = tf.position + tf.up * normalSpeed * Time.deltaTime;
@@ -72,9 +74,18 @@ public class StarShipPawn : Pawn
         tf.position = new Vector3(Random.Range(minX,maxX),Random.Range(minY,maxY));
     }
 
+    public override void Shoot()
+    {
+        if (sh != null)
+        {
+            sh.Shoot();
+        }
+    }   
+
     public override void Start()
     {
         tf = GetComponent<Transform>();
+        sh = GetComponent<Shooter>();
     }
 
     public override void Update()

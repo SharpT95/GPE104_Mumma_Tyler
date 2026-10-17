@@ -25,6 +25,10 @@ public class PlayerController : Controller
     public KeyCode turboBoost2;
 
     public KeyCode quitKey;
+
+    public KeyCode shootKey;
+
+
     public override void MakeDecisions()
     {
         if (pawn != null)
@@ -97,14 +101,24 @@ public class PlayerController : Controller
         }
         }
 
+        //Quit Application
         if (Input.GetKeyDown(quitKey))
         {
             Application.Quit();
         }
+
+        //Shoot
+        if (Input.GetKeyDown(shootKey))
+        {
+           pawn.Shoot();
+        }
     }
     public override void Start()
     {
-    
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.playerController = this;
+        }
     }
 
     public override void Update()

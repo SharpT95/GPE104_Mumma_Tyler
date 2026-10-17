@@ -23,7 +23,7 @@ public abstract class Pawn : MonoBehaviour
     public abstract void RotateClockwiseTurbo();
 
     public abstract void RotateCounterClockwiseTurbo();
-    
+
     public abstract void MoveForwardWorld();
 
     public abstract void MoveBackwardWorld();
@@ -31,4 +31,7 @@ public abstract class Pawn : MonoBehaviour
     public abstract void MoveRightWorld();
 
     public abstract void MoveLeftWorld();
+
+    public abstract void Shoot();
+
 }
