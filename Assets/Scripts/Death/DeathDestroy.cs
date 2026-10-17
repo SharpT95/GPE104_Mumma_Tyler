@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class DeathDestroy : Death
 {
+    public GameObject deathExplodePrefab;
+
     public override void Start()
     {
         
@@ -14,6 +17,11 @@ public class DeathDestroy : Death
 
     public override void Die()
     {
+        if (deathExplodePrefab != null)
+    {
+        Instantiate(deathExplodePrefab, transform.position, Quaternion.identity);
+    }
         Destroy(gameObject);
     }
 }
+

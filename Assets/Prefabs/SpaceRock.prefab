@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5520143420982720772}
   - component: {fileID: 452961178048932942}
   - component: {fileID: 3838122271457593899}
-  - component: {fileID: 3302859106842411379}
   - component: {fileID: 1591006736476474185}
+  - component: {fileID: -5017426635027624907}
+  - component: {fileID: 109537066116636182}
   m_Layer: 0
   m_Name: SpaceRock
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   damageAmount: 10
   otherHealthComponent: {fileID: 0}
   isInstaKill: 1
---- !u!114 &3302859106842411379
+--- !u!114 &1591006736476474185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772002259869478325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e3c6713a050c84bacdbcda183c4429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+--- !u!114 &-5017426635027624907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   currentHealth: 75
   maxHealth: 75
---- !u!114 &1591006736476474185
+--- !u!114 &109537066116636182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,6 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2772002259869478325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e3c6713a050c84bacdbcda183c4429, type: 3}
+  m_Script: {fileID: 11500000, guid: d8a0773e328084b4681b2a347635b983, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  m_EditorClassIdentifier: Assembly-CSharp::DeathDestroy
+  deathExplodePrefab: {fileID: 5744776337763666023, guid: cb4522c2631485b43968c87d2d4d0693, type: 3}
