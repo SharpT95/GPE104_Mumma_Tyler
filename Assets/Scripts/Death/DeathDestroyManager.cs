@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DeathDestroyManager : Death
 {
+    
     private Obstacle obstacleToRemoveOnDeath;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -9,10 +10,16 @@ public class DeathDestroyManager : Death
     {
         if (GameManager.instance != null)
         {
+           
+           
+           
             if (GameManager.instance.obstacleList != null && obstacleToRemoveOnDeath != null)
             {
                 GameManager.instance.obstacleList.Remove(obstacleToRemoveOnDeath);
             }
+
+                
+            
             
              
             

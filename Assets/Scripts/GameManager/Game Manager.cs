@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public List<Obstacle> obstacleList;
 
+    public int score;
+
+    public TMPro.TMP_Text text;
+
     private void Awake()
     {
         obstacleList = new List<Obstacle>();
@@ -48,6 +52,10 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Failure");
             }
+        }
+        if (text != null)
+        {
+            text.text = "Score: " + score;
         }
        
     }

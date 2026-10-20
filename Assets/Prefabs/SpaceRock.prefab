@@ -246,3 +246,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathDestroy
   deathExplodePrefab: {fileID: 5744776337763666023, guid: cb4522c2631485b43968c87d2d4d0693, type: 3}
+  scoreValue: 10

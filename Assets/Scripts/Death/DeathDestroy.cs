@@ -5,6 +5,8 @@ public class DeathDestroy : Death
 {
     public GameObject deathExplodePrefab;
 
+    public int scoreValue;
+
     public override void Start()
     {
         
@@ -21,6 +23,8 @@ public class DeathDestroy : Death
     {
         Instantiate(deathExplodePrefab, transform.position, Quaternion.identity);
     }
+        GameManager.instance.score += scoreValue;
+        
         Destroy(gameObject);
     }
 }
